@@ -11,6 +11,18 @@ html, body {
 	margin:0;
 }
 /*navigation*/
+header {
+	padding:0;
+}
+.navbar {
+	margin:29px 0 0 0;
+	background-color: transparent;
+    border: 0;
+    overflow: hidden;
+}
+.navbar-brand {
+	padding:0;
+}
 .navbar-left {
     float: right !important;
 }
@@ -18,9 +30,82 @@ html, body {
     float: right;
     margin: 0;
 }
+.navbar-nav {
+	li {
+		a {
+			float: left;
+			font-size: 14px;
+			line-height: 100px;
+			height: 100px;
+			color: $base-color !important;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
+			padding: 0 20px;
+			@include breakpoint(biggest_screen2){
+		 		padding: 0 10px;
+		 	}
+		}
+	}
+}
+.navbar-collapse{
+	padding:0;
+}
+.navbar-form {
+	position:relative;
+	margin-top:30px;
+	float:right;
+	padding:0;
+	.btn {
+		position:absolute;
+		right:10px;
+		border:0;
+		background:transparent;
+		&:hover, &:focus {
+			background:transparent;
 
+		}
+	}
+}
+.form-group {
+	.form-control {
+		width:185px;
+		border:2px solid $secondary-color !important;
+		@include rounded(100px);
+		font-size: 12px;
+	&:focus {
+		@include box-shadow(0, 0, 0, 0);
+		border:0;
+		}
+	}
+}
 
+#search-icon  { 
+	font-size: 1.8em; 
+	display: inline-block; 
+	width: 0.4em; 
+	height: 0.4em; 
+	border: 0.1em solid $base-color; 
+	position: relative; 
+	border-radius: 0.35em; 
+		&:before { 
 
+			content: ""; 
+			display: inline-block; 
+			position: absolute; 
+			right: -0.25em; 
+			bottom: -0.1em; 
+			border-width: 0; 
+			background: $base-color; 
+			width: 0.2em; 
+			height: 0.08em; 
+			-webkit-transform: rotate(38deg); 
+			-moz-transform: rotate(38deg); 
+			-ms-transform: rotate(38deg); 
+			-o-transform: rotate(38deg); 
+		}
+	} /*
 .btn-center {
 	margin:0 auto;
 	display:block;
@@ -40,7 +125,7 @@ html, body {
 		color: #fff;
 		}
 	}
-}
+}*/
 #cover {
 
 	text-align:center;
