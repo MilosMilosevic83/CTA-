@@ -2,7 +2,6 @@
 	display: block;
 	margin:40px auto 0 auto;
 }
-
 @mixin stretch($bg-size){
    -webkit-background-size: $bg-size;
   -moz-background-size: $bg-size;
