@@ -13,16 +13,14 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
  	<link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
- 	<script type="text/javascript" src="js/jquery.validate.js"></script>
+ 
  	<!--FONTS-->	
  	<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"> 
  	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
+
 <body>
-
-<!--/////////////////////////Fixed top/////////////////////////////////-->
-
 <div class="top">
     <div class="pagewidth">
      	<div class="top-left">
@@ -100,112 +98,48 @@
 		</div>
 </header>
 
-<!--/////////////////////////Main headline/////////////////////////////////-->
-	<section id="cover">
-        <div id="cover-caption">
-            <h1>
-                FREE WHITEPAPER <br><span> 10 KEY PROCUREMENT TAKEAWAYS TO BRING INTO 2017</span>
-             </h1>
-             <div class="orng_underline"></div>
-             <p>
-                With 2017 approaching, it is worthwhile to look back at the basics of Procurement and define best practices that should frame and guide our strategy in the new year. 
-             </p>
-        </div>
-    </section>
 
-
-<!--/////////////////////////What will you learn In this whitepaper?/////////////////////////////////-->
-
-
-<div class="wrap-content">
-    <section>
-    	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 about-wrap">
-    		
-    		<h2 class="section-headlines">WHAT WILL YOU LEARN <br> IN THIS WHITEPAPER?</h2>
-			<div class="orng_underline"></div>
-			<div>
-	    		<p class="txt">Most common Procurement challenges that can stifle growth. The subject elaborates on supply chain issues and, among others lack of risk management processes.
-	    		<span class="circle"></span>
-	    		</p>
-
-	    		<p>
-				Ten fundamental best practices that will help companies achieve optimization, and consider the best ways to implement them. Some of the best practices include answering questions like:
-				<br><br>
-				1. How to consolidate a supplier base<br>
-				2. How to reduce cost<br>
-				3. How to Implement High Frequency of Shipments...
-				<span class="circle"></span>
-				</p>
-			</div>
-    	</div>
-    </section>
-<!--/////////////////////////Form/////////////////////////////////-->
-    <section>
-    	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 form-wrap">
+	<section>
+    	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 form-wrap search-wrap">
+    		<div class="search-headline">
+    		<h2>Search</h2>
+		    	
+		    </div>
     		<div class="center-form">
-		    	<h2>GET THE WHITEPAPER NOW</h2>
-		    	<p>Fill in the simple form here <br> and click download </p>
-
+		    	
 				<form id="commentForm" method="get">
-					<p> <span class="field-star">*</span> Fields are mandatory</p>
+					
 				  <fieldset class="account-info">
-				    <label>
-				      Name <span class="field-star">*</span>
-				      <input type="text" minlength="2" name="name" required />
-				    </label>
-				    <label>
-				      Company <span class="field-star">*</span>
-				      <input type="text" name="company" required />
-				    </label>
-				    <label>
-				      E-mail <span class="field-star">*</span>
-				      <input type="email" name="e-mail" required />
+				    
+				    <label class="search-input">
+				      
+				      <input type="text" name="searchword" placeholder="Search Keyword:"  size="30" maxlength="200" value="" />
 				    </label>
 
 				  </fieldset>
 
-				  <div class="g-recaptcha" data-sitekey="6LfZdA4UAAAAACkvEReSW0yTGyq6m6gneG3KzcSI"></div>
-				  
-				  <div class="account-action">
-				    <a href="pdf/CTA.pdf" class="btn" target="blank_">DOWNLOAD NOW</a>
-				  </div>
-
+				  <fieldset class="account-action">
+				    <input class="btn btn2" type="submit" name="submit" value="SEARCH">
+				  </fieldset>
+				  <fieldset>
+					 	<label class="radials">
+					 	Search for: <br>
+					  		 <input type="radio" name="searchphrase" value="All words"> All words<br>
+					  	</label>
+					  	<label class="radials">
+							  <input type="radio" name="searchphrase" value="Any words"> Any words<br>
+						</label>
+						<label class="radials">
+							  <input type="radio" name="searchphrase" value="Exact phrase"> Exact phrase
+						</label>
+					 	
+				  </fieldset>
 				</form>
-
 			</div>
+			
 		</div>
     </section>
 
-    <!--/////////////////////////Social/////////////////////////////////-->
- 	
-    	<div class="center-social">
-    		<p>Share on:</p>
-
-			<div class="social">
-
-				
-				<a href="#" class="on-hover">
-				<img src="img/linkedin.png" alt="">
-				<span class="icon-hover"></span>
-				</a>
-				<a href="#" class="on-hover">
-				<img src="img/twitter.png" alt="">
-				<span class="icon-hover"></span>
-				</a>
-				<a href="#" class="on-hover">
-				<img src="img/facebook.png" alt="">
-				<span class="icon-hover"></span>
-				</a>
-				<a href="#" class="on-hover">
-				<img src="img/google+.png" alt="">
-				<span class="icon-hover"></span>
-				</a>
-
-			</div>
-		</div>
-	</div>	
-
- <!--/////////////////////////Footer/////////////////////////////////-->
 
 <footer>
 
@@ -255,7 +189,7 @@
 						<h3>Get connected</h3>
 											
 
-						<div class="social-custom">
+						<div class="custom">
 							
 								<a href="https://www.linkedin.com/company/central-trading-agency-inc" target="_blank">
 									<img title="LinkedIn" src="img/linkedin-hover.png" alt="LinkedIn">
@@ -280,7 +214,7 @@
 		<div class="center-bottom">
 			<div class="copyright">
 				<div class="copy col-xs-12 col-sm-6 col-md-6 col-lg-6">
-					<p>Copyright © 2016 CTA Procurement. All Rights Reserved.</p>	
+				Copyright © 2016 CTA Procurement. All Rights Reserved.
 				</div>
 					
 				<div class="privacy col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -295,7 +229,6 @@
 		 		
 </footer>
 
-		
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     <script type="text/javascript" src="js/activate.js"></script>
     <script type="text/javascript">
@@ -307,8 +240,7 @@
 	  ga('create', 'UA-85343959-1', 'auto');
 	  ga('send', 'pageview');
     </script>
-    <script type="text/javascript">
-    $("#commentForm").validate();
-    </script>
+    
 </body>
+</html>
 	 
