@@ -1,0 +1,80 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+.pagewidth {
+    max-width: 1200px;
+    width: 100%;
+    background: none;
+    margin:0 auto;
+}
+.top {
+    position: fixed;
+    top: 0;
+    height: 31px;
+    width: 100%;
+    background: $grey;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 0;
+    font-weight: $base-fw + 300;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    z-index: 99999;
+    p {
+    	margin: 0;
+		padding: 0;
+    }
+}
+
+.top-left {
+    float: left;
+    width: 50%;
+    @include breakpoint(big_screen1){
+        display: none;
+    }   
+}
+.top-right {
+    float: right;
+    width: 50%;
+    @include breakpoint(big_screen1){
+        width:100%;
+    }
+    .custom {
+	    float: right;
+         @include breakpoint(medium_screen1){
+                    margin:0 auto;
+                    float: none;
+                    width: 207px;
+                    }
+	}
+}
+.call-us {
+   border-right: 15px solid $grey;
+   @include breakpoint(medium_screen1){
+        display: none;
+        }
+    }
+
+p.rfq {
+	    padding: 0;
+	    margin: 0;
+	    line-height: 37px;
+	    font-size: 18px;
+	    letter-spacing: 1px;
+	    text-transform: none !important;
+	    a {
+	    	    color: white;
+			    margin: 0;
+			    padding: 7px 25px 8px 25px;
+			    background: $secondary-color;
+			    line-height: 37px;
+			    font-weight: 700;
+			    border-radius: 0 0 8px 8px;
+                @include transition(.8s);
+                &:hover {
+                    background:$base-color;
+                    color:#fff;
+                    text-decoration: none;
+                }
+			}
+	    }

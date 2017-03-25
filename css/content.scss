@@ -1,0 +1,262 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+#cover {
+
+	text-align:center;
+	background:url('../img/background.jpg') no-repeat top center;
+	padding-top:87px;
+	 @include breakpoint(medium_screen_extra){
+		 	padding-top:50px;
+		 }
+}
+
+%underline {
+	width:97px;
+	height:2px;
+	margin: 0 auto;
+	background:$secondary-color;
+	}
+#cover-caption {
+	width:100%;
+		h1 {
+		font-size:$base-fsz - 2em;
+		color:$base-color;
+		font-weight: $base-fw + 300;
+		padding:0 0 25px 0;
+		margin:0;
+		font-family: $font;
+		letter-spacing: 1px;
+		span{
+			font-weight:300;
+			display: inline-block;
+			padding:0;
+			font-size:$base-fsz - 3.2em;
+		}
+	}
+	.orng_underline {
+		@extend %underline;
+	}
+
+	p {
+		padding:41px 0 400px 0;
+		font-size:$base-fsz - 2.3em;
+		max-width: 683px;
+		width: 100%;
+		margin:0 auto;
+		font-weight: $base-fw - 100;
+		 @include breakpoint(medium_screen_extra){
+		 	font-size:$base-fsz - 3em;
+		 	padding:21px 20px 400px 20px;
+		 }
+	}
+}
+.circle {
+	position:absolute;
+	left:0;
+	top:5px;
+	width:17px;
+	height:17px;
+	background:#fff;
+	@include rounded(100px);
+	border:3px solid $secondary-color;
+}
+.about-wrap {
+	h2 {
+		margin-top: 102px;
+		font-size: $base-fsz - 1.3em;
+		font-weight: $base-fw + 500;
+	}
+	.orng_underline {
+		@extend %underline;
+		margin:0 0 30px 0;
+	}
+	p {
+		padding:0 0 0 36px;
+		line-height: 25px;
+		letter-spacing: .1em;
+		font-size: $base-fsz - 2.6em;
+		font-weight: $base-fw - 100;
+		position: relative;
+	}
+}
+
+.form-wrap {
+	@include breakpoint(medium_screen1){
+		 	padding:5px;
+		 }
+	h2 {
+		margin-top: 102px;
+		color: #646464;
+		font-weight: $base-fw - 100;
+		text-align: center;
+	}
+	p {
+		font-weight: $base-fw - 100;
+		text-align: center;
+		font-size: $base-fsz - 2.6em;
+	}
+	.center-form {
+	  max-width: 460px;
+	  width:100%;
+	  float: right;
+	  overflow: hidden;
+	  @include breakpoint(medium_screen1){
+		 	float: none;
+		 	margin:0 auto;
+		 }
+	}
+	form {
+	  margin-top: 35px;
+	  border: 1px solid #C2C2C2;
+	  @include rounded(2px);
+	  font: $font;
+	  overflow: hidden;
+	  padding:20px 48px;
+	  background: $grey;
+	  @include breakpoint(medium_screen1){
+		 	padding:20px 0;
+		 	border:0;
+		 	background:transparent;
+		 }
+	  p {
+	  	text-align: left;
+	  	span {
+	  		color:red;
+	  	}
+	  }
+	  
+	}
+	fieldset {
+	  border: 0;
+	  margin: 0;
+	  padding: 0;
+	}
+	input {
+	   @include rounded(4px);
+	  font: $font;
+	  margin: 0;
+	}
+	.account-info {
+	  padding: 0;
+	}
+	.account-info {
+	  label {
+	  color: #646464;
+	  display: block;
+	  font-size: $base-fsz - 2.6em;
+	  font-weight: $base-fw - 100;
+	  margin-bottom: 10px;
+	  span {
+	  	color:red;
+	   }
+	  }
+	  input {
+	    background: #fff;
+	    border: 1px solid #C2C2C2;
+	     box-shadow: none;
+	    color: #636466;
+	    padding: 6px;
+	    margin-top: 6px;
+	    width: 100%;
+	  }
+	}
+
+
+	.account-action {
+	  padding: 20px 0 0 0;
+	    .btn {
+	    background: linear-gradient(#49708f, #293f50);
+	    border: 0;
+	    @include transition(all 0.3s ease);
+	    font-size: 16px;
+		line-height: 16px;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding: 20px 60px 20px 30px;
+		margin: 0;
+		border-radius: 100px;
+		background:  $secondary-color url(../img/arrow.png) no-repeat 88% center;
+	    float: left;
+	    @include transition(.8s);
+	    &:hover {
+	    	background:$base-color url(../img/arrow.png) no-repeat 88% center;
+	    }
+	  }
+	}
+}
+.error {
+	font-size:$base-fsz - 3em !important;
+	color:red !important;
+}
+.center-social {
+	margin-top:90px;
+	margin-bottom:90px;
+	overflow:hidden;
+	clear: both;
+	float:left;
+	width:100%;
+	text-align:center;
+}
+.social {
+  display: table;
+  width:300px;
+  text-align:center;
+  margin:20px auto;
+
+  a {
+    display: table-cell;
+    position:relative;
+  }
+  
+  img {
+    max-width:40px; 
+  }
+}
+
+.on-hover{
+	&:nth-child(1){
+		&:hover .icon-hover {
+		  position:absolute;
+		  left:16px;
+		  width: 42px;
+		  height: 42px;
+		  z-index: 100;
+		  background: transparent url(../img/linkedin-hover.png) no-repeat;
+		  cursor: pointer;
+		}
+	}
+	&:nth-child(2){
+		&:hover .icon-hover {
+		  position:absolute;
+		  left:16px;
+		  width: 42px;
+		  height: 42px;
+		  z-index: 100;
+		  background: transparent url(../img/twitter-hover.png) no-repeat;
+		  cursor: pointer;
+		}
+	}
+	&:nth-child(3){
+		&:hover .icon-hover {
+		  position:absolute;
+		  left:16px;
+		  width: 42px;
+		  height: 42px;
+		  z-index: 100;
+		  background: transparent url(../img/facebook-hover.png) no-repeat;
+		  cursor: pointer;
+		}
+	}
+	&:nth-child(4){
+		&:hover .icon-hover {
+		  position:absolute;
+		  left:16px;
+		  width: 42px;
+		  height: 42px;
+		  z-index: 100;
+		  background: transparent url(../img/google+hover.png) no-repeat;
+		  cursor: pointer;
+		}
+	}
+}

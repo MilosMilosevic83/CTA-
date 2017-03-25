@@ -1,0 +1,240 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+html, body {
+	font-family: $font;
+	padding:0;
+	margin:0;
+}
+/*navigation*/
+header {
+	padding:0;
+}
+.container-fluid {
+	padding-right:0;
+	height:104px;
+}
+.navbar {
+	margin:33px 0 0 0;
+	background-color: transparent;
+    border: 0;
+    overflow: hidden;
+}
+.navbar-brand {
+	padding:0;
+	img {
+		
+		@include breakpoint(big_screen1){
+		 	width: 250px;
+		 	margin-top: 10px;
+		 	padding-left:15px;
+		 }
+	}
+}
+.navbar-left {
+    float: right !important;
+}
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
+.navbar-nav {
+	@include breakpoint(big_screen1){
+		 	display: none;
+		 }
+	li {
+
+		a {
+			float: left;
+			font-size: 14px;
+			line-height: 100px;
+			height: 100px;
+			color: $base-color !important;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
+			padding: 0 20px;
+			@include transition(.8s);
+			@include breakpoint(biggest_screen2){
+		 		padding: 0 10px;
+		 	}
+		 	&:hover{
+		 		color: $secondary-color !important;
+		 	}
+		}
+	}
+}
+.navbar-collapse{
+	padding:0;
+}
+.navbar-form {
+	position:relative;
+	margin-top:33px;
+	float:right;
+	padding:0;
+	@include breakpoint(big_screen1){
+		margin-right: 90px;
+	}
+	@include breakpoint(medium_screen1){
+		display: none;
+	}
+button {
+		position:absolute;
+		border:0 !important;
+		right: 10px;
+		top: 5px;
+		background:transparent !important;
+		&:hover, &:focus {
+			background:transparent;
+		}
+	}
+}
+.form-group {
+	.form-control {
+		width:185px;
+		border:2px solid $secondary-color !important;
+		@include rounded(100px);
+		font-size: 12px;
+		
+	}
+	&:focus {
+		@include box-shadow(none);
+		border:0;
+		background:#fff !important;
+		}
+	}
+#search-icon  { 
+	font-size: 1.8em; 
+	display: inline-block; 
+	width: 0.4em; 
+	height: 0.4em; 
+	border: 0.1em solid $base-color; 
+	position: relative; 
+	border-radius: 0.35em; 
+		&:before { 
+
+			content: ""; 
+			display: inline-block; 
+			position: absolute; 
+			right: -0.25em; 
+			bottom: -0.1em; 
+			border-width: 0; 
+			background: $base-color; 
+			width: 0.2em; 
+			height: 0.08em; 
+			-webkit-transform: rotate(38deg); 
+			-moz-transform: rotate(38deg); 
+			-ms-transform: rotate(38deg); 
+			-o-transform: rotate(38deg); 
+		}
+	} 
+.mob-menu-wrap {
+	display: none;
+	 @include breakpoint(big_screen1){
+		display: inline-block;
+	}
+}
+
+.overlay {
+
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 24px;
+        color: #4B494A;
+        display: block; 
+        text-transform: uppercase;
+        transition: 0.3s;
+       font-family: $font;
+       list-style-type: none;
+       &:hover, &:focus {
+          color: #f1f1f1;
+      }
+    }
+}
+
+.overlay-content {
+    position: relative;
+    top: 102px;
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px;
+    padding:0;
+    li {
+    	list-style-type: none;
+    }
+    a {
+      &:hover {
+        background:$secondary-color;
+        list-style-type: none;
+      }
+    }
+}
+
+
+.closebtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 50px !important; 
+    font-weight: $base-fw + 300;
+    color: $base-color !important;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .closebtn {
+        font-size: 40px !important;
+        top: 15px;
+        right: 35px;
+    }
+}
+.menu-opener {
+  position:absolute;
+  top: 22px;
+  right:-15px;
+  width: 100px;
+  height: 70px;
+  overflow: hidden;
+  display:block;
+  cursor:pointer;
+  padding:15px;
+
+  &:hover {
+    opacity: .9;
+  }
+  span {
+    width: 25px;
+    height: 4px;
+    margin:3px auto;
+    display: block;
+     background:$base-color;
+  }
+}
+
+
+/*Form and text*/
+
+
+.wrap-content {
+	max-width:1200px;
+	width:100%;
+	margin:0 auto;
+	@include breakpoint(big_screen1){
+		height: 104px;
+	}
+}
